@@ -1,4 +1,3 @@
-/* eslint-disable consistent-return */
 import Api from './Api';
 
 export default {
@@ -7,7 +6,7 @@ export default {
       const response = await Api().post('/clients', client);
       return response.data;
     } catch (error) {
-      console.log(error);
+      return console.log(error);
     }
   },
   async getClients() {
@@ -15,7 +14,7 @@ export default {
       const response = await Api().get('/clients');
       return response.data;
     } catch (error) {
-      console.log(error);
+      return console.log(error);
     }
   },
   async getClientId(id) {
@@ -23,7 +22,7 @@ export default {
       const response = await Api().get(`/clients/${id}`);
       return response.data;
     } catch (error) {
-      console.log(error);
+      return console.log(error);
     }
   },
   async updateClient(id) {
@@ -31,7 +30,7 @@ export default {
       const response = await Api().put(`/clients/${id}`);
       return response.data;
     } catch (error) {
-      console.log(error);
+      return console.log(error);
     }
   },
   async deleteClient(id) {
@@ -39,7 +38,7 @@ export default {
       const response = await Api().delete(`/clients/${id}`);
       return response.data;
     } catch (error) {
-      console.log(error);
+      return console.log(error);
     }
   },
 };
