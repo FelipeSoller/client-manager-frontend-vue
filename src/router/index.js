@@ -8,17 +8,17 @@ Vue.use(VueRouter);
 const routes = [
   {
     path: '/',
-    name: 'Lista de Clientes',
+    name: 'Home',
     component: () => import('../components/list-client/ListClientComponent'),
   },
   {
     path: '/client-create',
-    name: 'Adicionar clientes',
+    name: 'list',
     component: () => import('../components/create-client/CreateClientComponent'),
   },
   {
     path: '/client-edit/:id',
-    name: 'Atualizar clientes',
+    name: 'update',
     component: () => import('../components/edit-client/EditClientComponent'),
   },
 ];
