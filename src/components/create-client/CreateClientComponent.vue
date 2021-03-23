@@ -131,7 +131,7 @@
 
           <div class="form-group">
             <button class="btn btn-primary" type="submit">
-              <font-awesome-icon :icon="['fas', 'user-plus']" />Cliente
+              <font-awesome-icon :icon="['fas', 'user-plus']" /> Cliente
             </button>
           </div>
         </form>
