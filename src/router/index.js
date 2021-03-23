@@ -17,7 +17,7 @@ const routes = [
     component: () => import('../components/create-client/CreateClientComponent'),
   },
   {
-    path: '/client-update',
+    path: '/client-edit/:id',
     name: 'Atualizar clientes',
     component: () => import('../components/edit-client/EditClientComponent'),
   },

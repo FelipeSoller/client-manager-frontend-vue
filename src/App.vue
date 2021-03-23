@@ -9,9 +9,6 @@
           <li class="nav-item">
             <router-link class="nav-link" to='/client-create'>Adicionar clientes</router-link>
           </li>
-          <li class="nav-item">
-            <router-link class="nav-link" to='/client-update'>Atualizar clientes</router-link>
-          </li>
         </ul>
     </nav>
     <div class="container mt-5">
