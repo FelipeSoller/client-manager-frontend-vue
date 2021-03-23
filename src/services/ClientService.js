@@ -1,3 +1,4 @@
+/* eslint-disable consistent-return */
 import Api from './Api';
 
 export default {
