@@ -130,7 +130,7 @@
           </div>
 
           <div class="form-group">
-            <button class="btn btn-primary" type="submit">
+            <button @click="submitNewClient" class="btn btn-primary">
               <font-awesome-icon :icon="['fas', 'user-plus']" /> Cliente
             </button>
           </div>
@@ -143,20 +143,21 @@
 <script>
 
 import { required, maxLength, between } from 'vuelidate/lib/validators';
+import ClientService from '../../services/ClientService';
 
 export default {
   name: 'CreateClientComponent',
   data() {
     return {
       client: {
-        name: '',
-        address: '',
-        telephone_number: '',
-        has_relatives: '',
+        name: null,
+        address: null,
+        telephone_number: null,
+        has_relatives: null,
         relatives: {
-          relatives_name: '',
-          relatives_age: '',
-          relatives_relationship: '',
+          relatives_name: null,
+          relatives_age: null,
+          relatives_relationship: null,
         },
       },
       isSubmitted: false,
@@ -200,6 +201,16 @@ export default {
       if (this.$v.$invalid) {
         // eslint-disable-next-line no-useless-return
         return;
+      }
+    },
+    async submitNewClient() {
+      try {
+        await ClientService.createNewClient(this.client);
+        this.$router.push({
+          name: 'list',
+        });
+      } catch (error) {
+        console.log(error);
       }
     },
   },
